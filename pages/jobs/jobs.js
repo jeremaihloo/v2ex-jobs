@@ -21,7 +21,6 @@ Page({
         item = i;
       }
     })
-    console.log('current job item ', item)
     app.globalData.currentItem = item;
     wx.navigateTo({
       url: './jobitem',
@@ -36,7 +35,6 @@ Page({
   },
 
   fetch: function (city) {
-    console.log('fetch', city)
     wx.request({
       url: 'https://www.sov2ex.com/api/search',
       data: {
