@@ -24,10 +24,11 @@ Page({
         this.setData({
           item: res.data[0]
         })
+        var that = this;
+        WxParse.wxParse('article', 'html', this.data.item.content_rendered, that, 5);
       }
     })
-    var that = this;
-    // WxParse.wxParse('article', 'md', this.data.item._source.content, that, 5);
+    
   },
 
   /**

@@ -1,5 +1,9 @@
 /* pages/jobs/jobitem.wxss */
 
+
+
+@import "/wxParse/wxParse.wxss";
+
 .container {
   padding: 20rpx;
 }
@@ -13,5 +17,3 @@
   margin-top: 10rpx;
   font-size: 30rpx;
 }
-
-@import "/wxParse/wxParse.wxss";

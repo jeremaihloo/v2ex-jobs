@@ -8,13 +8,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hits: []
+    hits: [],
+    region: ['上海', '北京', '广州', '深圳', '杭州'],
+    customItem: '全部',
+    cityIndex: 0
   },
 
   tapItem: function (e) {
     var item = null;
-    this.data.hits.forEach(i =>{
-      if (i._source.id == e.currentTarget.id){
+    this.data.hits.forEach(i => {
+      if (i._source.id == e.currentTarget.id) {
         item = i;
       }
     })
@@ -25,15 +28,20 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  bindRegionChange: function (e) {
+    this.setData({
+      cityIndex: e.detail.value
+    })
+    this.fetch(this.data.region[this.data.cityIndex])
+  },
+
+  fetch: function (city) {
+    console.log('fetch', city)
     wx.request({
       url: 'https://www.sov2ex.com/api/search',
       data: {
         node: 'jobs',
-        q: '上海',
+        q: city,
         sort: 'created',
         size: 50
       },
@@ -47,6 +55,12 @@ Page({
         })
       }
     })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.fetch('上海');
   },
 
   /**

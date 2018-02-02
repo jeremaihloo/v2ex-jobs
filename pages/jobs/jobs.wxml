@@ -1,5 +1,10 @@
 <!--pages/jobs/jobs.wxml-->
 <view class="container">
+<picker mode="selector" value="{{cityIndex}}" bindchange="bindRegionChange" range="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      {{region[cityIndex]}}
+    </view>
+  </picker>
   <view bindtap="tapItem" wx:for="{{hits}}" wx:key="{{index}}" id="{{item._source.id}}" class="job-item">
     <view class="job-item-title">{{item._source.title}}</view>
     <view class="job-item-created">{{item._source.created}}</view>

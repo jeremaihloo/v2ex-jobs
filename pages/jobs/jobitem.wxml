@@ -6,5 +6,8 @@
 
 <view class='container'>
   <view class='title'>{{item.title}}</view>
-  <rich-text class='content' nodes="{{item.content_rendered}}"></rich-text>
+  <view class='content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <!-- <rich-text class='content' nodes="{{item.content_rendered}}"></rich-text> -->
 </view>
