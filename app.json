@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/jobs/jobs",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/jobs/jobitem"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

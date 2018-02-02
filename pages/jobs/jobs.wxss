@@ -1,0 +1,25 @@
+/* pages/jobs/jobs.wxss */
+
+.container {
+  font-size: 35rpx;
+  text-align: left;
+  padding: 20rpx;
+}
+
+.job-item {
+  border-bottom: 1rpx #ccc solid;
+  width: 100%;
+  padding: 10rpx;
+}
+
+.job-item-created{
+  color: #ccc;
+  float: right;
+  font-size: 30rpx;
+  width: 100%;
+  text-align: right;
+}
+
+.job-item-content {
+  padding-top: 10rpx;
+}

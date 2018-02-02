@@ -1,0 +1,10 @@
+<!--pages/jobs/jobitem.wxml-->
+<!-- // 引入模板 -->
+<import src="../../wxParse/wxParse.wxml"/>
+<!-- //这里data中article为bindName -->
+
+
+<view class='container'>
+  <view class='title'>{{item.title}}</view>
+  <rich-text class='content' nodes="{{item.content_rendered}}"></rich-text>
+</view>
