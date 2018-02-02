@@ -7,17 +7,23 @@
 }
 
 .job-item {
-  border-bottom: 1rpx #ccc solid;
+  border-top: 1rpx #ccc solid;
   width: 100%;
-  padding: 10rpx;
+  padding-top: 20rpx;
+  margin-top: 10rpx;
 }
 
-.job-item-created{
+.job-item-created {
   color: #ccc;
   float: right;
   font-size: 30rpx;
   width: 100%;
   text-align: right;
+}
+
+.job-item-title {
+  height: 100rpx;
+  overflow: hidden;
 }
 
 .job-item-content {
